@@ -1,0 +1,25 @@
+# behat.yml
+default:
+    suites:
+        default:
+          contexts:
+            - FeatureContext
+            - AddToCartContext
+            - CheckoutContext
+          filters:
+            tags: "~@wip"
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://automationpractice.com
+            goutte:
+                guzzle_parameters:
+                  verify: false
+            selenium2:
+                wd_host: http://localhost:4444/wd/hub
+                browser: chrome
+        SensioLabs\Behat\PageObjectExtension: ~
+
+
+#    paths:
+#        features: features
+#        bootstrap: /bootstrap
