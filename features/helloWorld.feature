@@ -39,3 +39,4 @@ Feature:
     Then I select pay by bankwire
     Then I confirm the order
     //bau
+    //baubau
