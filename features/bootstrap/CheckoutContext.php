@@ -25,6 +25,7 @@ class CheckoutContext implements Context
     private $checkoutShippingPage;
     private $checkoutPaymentPage;
     private $checkoutConfirmPage;
+    private $checkoutOrderConfirmFinalPage;
 
 
     /**
@@ -40,7 +41,8 @@ class CheckoutContext implements Context
         CheckoutAddressPage $checkoutAddressPage,
         CheckoutShippingPage $checkoutShippingPage,
         CheckoutPaymentPage $checkoutPaymentPage,
-        CheckoutConfirmPage $checkoutConfirmPage
+        CheckoutConfirmPage $checkoutConfirmPage,
+        \Page\CheckoutOrderConfirmFinalPage $checkoutOrderConfirmFinalPage
     )
     {
         $this->checkoutSummaryPage = $checkoutSummaryPage;
@@ -49,6 +51,7 @@ class CheckoutContext implements Context
         $this->checkoutShippingPage = $checkoutShippingPage;
         $this->checkoutPaymentPage = $checkoutPaymentPage;
         $this->checkoutConfirmPage = $checkoutConfirmPage;
+        $this->checkoutOrderConfirmFinalPage = $checkoutOrderConfirmFinalPage;
     }
 
     /**
@@ -101,6 +104,14 @@ class CheckoutContext implements Context
      */
     public function iConfirmTheOrder(){
     $this->checkoutConfirmPage->iConfirmTheOrder();
+    }
+
+    /**
+     * @Then I check the order is complete
+     */
+    public function iCheckTheOrderIsComplete()
+    {
+        $this->checkoutOrderConfirmFinalPage->iCheckOrderOK();
     }
 }
 

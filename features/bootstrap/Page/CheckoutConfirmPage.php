@@ -16,7 +16,7 @@ class CheckoutConfirmPage extends BasePage
     {
         $this->waitForElement("i_confirm_the_order");
         $this->getElement("i_confirm_the_order")->click();
-        $this->getDriver()->wait( 11111, 0);
+//        $this->getDriver()->wait( 11111, 0);
     }
 
 
