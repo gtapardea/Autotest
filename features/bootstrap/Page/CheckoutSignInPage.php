@@ -2,6 +2,7 @@
 
 namespace Page;
 
+use Helper\LoginCredentials;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 
 class CheckoutSignInPage extends BasePage
@@ -18,8 +19,8 @@ class CheckoutSignInPage extends BasePage
     public function signIn()
     {
         $this->waitForElement("sign_in_email_field");
-        $this->getElement("sign_in_email_field")->setValue("atg.autotesting@gmail.com");
-        $this->getElement("sign_in_password_field")->setValue('1@3$qWeR');
+        $this->getElement("sign_in_email_field")->setValue(LoginCredentials::USER);
+        $this->getElement("sign_in_password_field")->setValue(LoginCredentials::PASS);
         $this->getElement("sign_in_submit")->click();
     }
 
