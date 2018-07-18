@@ -73,15 +73,17 @@ class CheckoutContext implements Context
     /**
      * @Given I proceed to shipping
      */
-    public function iProceedToShipping(){
+    public function iProceedToShipping()
+    {
         $this->checkoutAddressPage->proceedToShipping();
     }
 
     /**
      * @Given I agree with the terms
      */
-    public function iAgreeWithTheTerms(){
-    $this->checkoutShippingPage->agreeToTerms();
+    public function iAgreeWithTheTerms()
+    {
+        $this->checkoutShippingPage->agreeToTerms();
     }
 
     /**
@@ -95,15 +97,17 @@ class CheckoutContext implements Context
     /**
      * @Given I select pay by bankwire
      */
-    public function iSelectPayByBankwire(){
+    public function iSelectPayByBankwire()
+    {
         $this->checkoutPaymentPage->payByBankWire();
     }
 
     /**
      * @Given I confirm the order
      */
-    public function iConfirmTheOrder(){
-    $this->checkoutConfirmPage->iConfirmTheOrder();
+    public function iConfirmTheOrder()
+    {
+        $this->checkoutConfirmPage->iConfirmTheOrder();
     }
 
     /**

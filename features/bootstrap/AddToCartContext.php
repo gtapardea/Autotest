@@ -39,7 +39,9 @@ class AddToCartContext implements Context
      */
     public function iAddTheProductToCart()
     {
+        $this->productPage->setCheckoutData();
         $this->productPage->addToCart();
+        $this->productPage->checkCheckoutData();
     }
 
     /**
