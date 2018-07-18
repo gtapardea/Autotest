@@ -15,7 +15,8 @@ class ProductPage extends BasePage
         //checks
         "product_name_check" => "#layer_cart_product_title",
         "quantity_check" => "#layer_cart_product_quantity",
-        "price_check" => ".ajax_block_products_total",
+        "price_check1" => "#layer_cart_product_price",
+        "price_check2" => ".ajax_block_products_total",
         "shipping_check" => ".layer_cart_row .ajax_cart_shipping_cost",
         "total_check" => ".layer_cart_row .ajax_block_cart_total",
         //Others
